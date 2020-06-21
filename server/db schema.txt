@@ -1,0 +1,13 @@
+db.createCollection( "repos", {
+   validator: { $jsonSchema: {
+      bsonType: "object",
+      required: [ "uname" ],
+      properties: {
+         repos: {
+            bsonType: "array",
+         }
+      }
+   } }
+} )
+
+
